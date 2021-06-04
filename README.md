@@ -33,6 +33,9 @@ To add it to your page, use the name my-grid-display for the custom tag:
 
 The component receives a page size and a list of elements. The page size needs to be higher than zero and at most the size of the list.
 The list must not be empty.
+The elements must contain at least the following fields: “title”, “imagePath”, “description”, “type” and “onClickHref”.
+
+![](Screenshot%20(163).png)
 
 ## Component description
 
