@@ -1,0 +1,48 @@
+
+<div class="external-container" *ngIf="!error">
+  <div class="navigation-container">
+    <table>
+      <tr>
+        <td>
+          <button class="btn" [disabled]="buttonFirst" (click)="firstPage()">
+            <img src="../../assets/img/first.png" style="width: 1rem" alt="Arrow">
+            First
+          </button>
+        </td>
+        <td>
+          <button class="btn" [disabled]="buttonPrev" (click)="previousPage()">
+            <img src="../../assets/img/prev.png" style="width: 1rem" alt="Arrow">
+            Previous
+          </button>
+        </td>
+        <td *ngFor="let page of arrayOfPages()">
+          <button class="btn" [disabled]="isPageCurrentPage(page)" (click)="moveToPage(page)">{{page}}</button>
+        </td>
+        <td>
+          <button class="btn" [disabled]="buttonNext" (click)="nextPage()">
+            Next
+            <img src="../../assets/img/next.png" style="width: 1rem" alt="Arrow">
+          </button>
+        </td>
+        <td>
+          <button class="btn" [disabled]="buttonLast" (click)="lastPage()">
+            Last
+            <img src="../../assets/img/last.png" style="width: 1rem" alt="Arrow">
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="info-container">
+    <p>{{page_size}} out of {{elements.length}} elements</p>
+  </div>
+  <div class="grid-container">
+    <my-card *ngFor="let index of arrayOfIndexes()" [element]="elements[index]"></my-card>
+  </div>
+</div>
+<div class="external-container" *ngIf="error">
+  <div class="error-container">
+    <p>Incorrect input data: {{errorMsg}}</p>
+  </div>
+</div>
+

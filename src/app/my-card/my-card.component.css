@@ -1,0 +1,23 @@
+
+.card-container {
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 90%;
+  margin: auto;
+  height: 90%;
+}
+
+.card-container:hover {
+  box-shadow: 0 1rem 2rem 0 rgba(0,0,0,0.2);
+}
+
+.card-text-container {
+  margin: 1rem;
+  padding-bottom: 2rem;
+}
+
+a
+{
+  text-decoration: none;
+  color: black;
+}
